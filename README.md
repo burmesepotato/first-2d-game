@@ -1,13 +1,14 @@
 # **Welcome to my Experimental 2D Game Project! 🚀**
 
-This repo is my playground for learning **Godot**, closely following the official documentation *step-by-step*. ✨
+This repo is my playground for learning **Godot**, closely following the official documentation *step-by-step*. ✨ 
+<br> So don't expect any _Bibbidi-Bobbidi-Boo_ here yet.
 
 ---
 
-## **Why? 🤔**
+## **Why this repo? 🤔**
 
 I’m documenting my journey from _“what’s a node?”_ to _“hey, it works!”_ . 
-Codes are still _sh*t_, but oh well, we all gotta start somewhere.
+<br> Codes are still _sh*t_, but oh well, we all gotta start somewhere.
 
 ---
 
