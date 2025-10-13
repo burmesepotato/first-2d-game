@@ -1,13 +1,18 @@
+# See learning journal with explanations here 
+# https://www.notion.so/Godot-Official-Your-First-2D-game-243d836b25b0804d86ced1946c5e641c?source=copy_link
+
 extends Area2D
 
 signal hit
 
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
+var player_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
-	hide()
+	player_size = $CollisionShape2D.shape.get_rect().size
+	#hide()
 
 func _process(delta):
 	var velocity = Vector2.ZERO # The player's movement vector.
@@ -36,8 +41,11 @@ func _process(delta):
 		$AnimatedSprite2D.stop()
 	
 	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-		
+	#position = position.clamp(Vector2.ZERO, screen_size)
+	
+	# Improvement below so player isn't half outside the screen
+	position = position.clamp(Vector2.ZERO+player_size/2, screen_size-player_size/2)
+	
 
 
 func _on_body_entered(body: Node2D) -> void:
