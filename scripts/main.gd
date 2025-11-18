@@ -5,4 +5,11 @@ var score
 
 # Receive hit() signal from Player node and name as game_over() func
 func game_over() -> void:
-	pass # Replace with function body.
+	$ScoreTimer.stop()
+	$MobTimer.stop()
+
+func new_game() -> void:
+	score = 0
+	$Player.start($StartPosition.position)
+	$ScoreTimer.start()
+	
