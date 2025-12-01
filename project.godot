@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="official-first-2d-game"
+run/main_scene="uid://bmvktcupodlol"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
