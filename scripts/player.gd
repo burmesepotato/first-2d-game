@@ -48,7 +48,7 @@ func _process(delta):
 	
 
 
-func _on_body_entered() -> void:
+func _on_body_entered(_body) -> void:
 	hide() # Player disappears after being hit.
 	hit.emit()
 	# Must be deferred as we can't change physics properties on a physics callback.

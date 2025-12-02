@@ -11,7 +11,7 @@ func game_over() -> void:
 func new_game() -> void:
 	score = 0
 	$Player.start($StartPosition.position)
-	$ScoreTimer.start()
+	$StartTimer.start()
 	
 # Gives Player a few second, then actually starts the game
 func _on_start_timer_timeout() -> void:
